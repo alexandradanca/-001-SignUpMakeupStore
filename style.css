@@ -1,0 +1,334 @@
+:root {
+    --body-bg: #FFE6E6; 
+    --form-bg:#F2D1D1;
+    --light-blue: #DAEAF1;
+    --blue: #9dbcc7;
+    --form-dark-bg:#25292E;
+    --normal-font: 1vw;
+    --title-font: 2vw;
+    --form-width: 40vw;
+    --form-height: 80vh;
+    --form-m-width: 100vw;
+    --form-m-height: 100vh;
+    --title-m-font: 4vw;
+    --button-font: 2vw;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.globalContainer {
+    background-color: var(--body-bg);
+    height: 100vh;
+}
+
+/********** First page ***********/
+
+    .logoContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+    }
+
+    .logo-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;    
+        height: 6vh;
+    }
+
+    .logo {
+        font-family: "Playwrite US Trad";
+        font-size: var(--normal-font);
+        color: var(--blue);
+        text-align: center;
+    }
+    
+    .logo>span {
+        font-family: "Open Sans", sans-serif;
+    }
+
+    .contentContainer, .logoContainer.desktop-only {
+        width: var(--form-width);
+        height: var(--form-height);
+    }
+    
+    .contentContainer {
+        flex-direction: column;
+        background-color: var(--form-bg);
+    }
+    
+    .contentContainer > img {
+        height:70%;
+        width: 100%;
+    }
+    
+    .contentText {
+        height:20%;
+        flex-direction: column;
+
+    }
+    
+    .contentText > a {
+        padding: 1vh;
+        width: 40%;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 3px;
+        font-size: var(--normal-font);
+        text-decoration: none;
+    }
+    
+    .login {
+        color: var(--blue);
+        margin-bottom: 2vh;
+        border: solid 2px var(--blue);
+        position: relative;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+    
+    .login:before, .signup:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--blue);
+        transform: translateY(-110%);
+        transition: all 0.5s;
+    }
+    
+    .login:hover:before, .signup:hover:before {
+        transform: translateY(0);
+    }
+    
+    .login:after{
+        content: 'log in';
+    }
+    
+    .signup:after{
+        content: 'sign up';
+    }
+    
+    .login:after, .signup:after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: var(--blue);
+        transition: all 0.5s;
+        opacity: 0;
+        color: var(--form-bg);
+    }
+    
+    .login:hover:after, .signup:hover:after {
+        opacity: 1;
+    }
+    
+    .signup {
+        background-color: var(--light-blue);
+        border: solid 2px var(--form-bg);
+        color: var(--blue);
+        position: relative;
+        transition: all 0.5s;
+        overflow: hidden;
+    }
+
+@media (max-width: 1120px){
+    .logoContainer.desktop-only{
+        display: none;
+    }
+
+    .contentContainer {
+        width: var(--form-m-width);
+        height: var(--form-m-height);
+    }
+
+    .logoContainer.mobile-only{
+        height:10%;  
+    }
+
+    .logo{
+        font-size: var(--title-m-font);
+        align-self: center;
+    }
+
+    .contentText {
+        width: 30vw;
+    }
+
+    .contentText > a {
+        width: 100%;
+        font-size: var(--title-m-font)
+    }
+}
+
+@media (501px <= width <= 1120px){
+    .contentContainer > img{
+        width: 80%;
+        padding: 0;
+    }
+}
+
+@media (min-width: 1121px){
+    .logoContainer.mobile-only{
+        display: none;
+    }
+    .logoContainer>h1{
+        text-transform: capitalize;
+        font-family: "Playwrite US Trad", cursive;
+        font-size: var(--title-font);
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .logoContainer>h1>span{
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+        font-weight: 300;
+        color: var(--blue);
+    }
+
+    .contentText {
+        width: 30vw;
+        height:30%;
+    }
+
+    .contentText > a {
+        width: 40%;        
+    }
+}
+
+/*********************/
+
+.signUpContainer{
+    background-color: var(--form-dark-bg);
+    flex-direction: column;
+    gap: 10vh;
+}
+
+h1 {
+    color: var(--form-bg);
+    font-weight: bolder;
+    letter-spacing: 3px;
+ }
+
+form {
+    flex-direction: column;
+    width: 80%;
+}
+
+form> div {
+    margin-bottom: 10%;
+    width: 50vw;
+}
+
+input {
+    font-family: "Open Sans", sans-serif;
+    font-size: var(--normal-m-font);
+    color: var(--form-bg);
+    background: none;
+    border: solid 1px var(--form-bg);
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+    border: none;
+    border-bottom: solid 1px var(--form-bg);
+}
+
+::placeholder {
+    color: var(--form-bg);
+    padding-left: 3%;
+}
+
+button {
+    font-size: var(--normal-m-font);
+    text-transform: initial;
+    background: none;
+    border: solid 1px var(--form-bg);
+    margin-top: 2vh;
+    padding: 1vh 5vw;
+    color: var(--form-bg);
+}
+
+button:hover {
+    background-color: var(--form-bg);
+    color: var(--form-dark-bg);
+}
+
+.signUpContainer>p, .detailsLogin, .detailsLogin>a {
+    font-size: var(--normal-m-font);
+    color: var(--form-bg);
+}
+
+.signUpContainer>p>a {
+    color: var(--body-bg);
+}
+
+
+
+.detailsLogin{
+    justify-content: space-between;
+    width: 100%;
+}
+
+.detailsLogin, .detailsLogin>p>a{
+    color: var(--form-bg);
+}
+
+.detailsLogin>div>input {
+    height: 1vh;
+    width: 1vw;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+@media (max-width: 1120px){
+    .signUpContainer{
+        width: var(--form-m-width);
+        height: var(--form-m-height);
+        overflow: scroll;
+    }
+
+    h1{
+        font-size: var(--title-m-font);
+    }
+}
+
+@media (min-width: 1121px){
+
+    .signUpContainer{
+        gap: 5vh;
+    }
+
+    form> div {
+        height: 1vh;
+        align-self:center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input {
+        width: 50%;
+    }
+}
+
+

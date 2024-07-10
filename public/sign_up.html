@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="globalContainer flex-center">
+      <div class="signUpContainer flex-center">
+        <div class="logoGenCont">
+          <img class="logo-img" src="../assets/images/icon.png" />
+          <div class="logo">Makeup <span>S•h•o•p</span></div>
+        </div>
+        <h1>Create an account</h1>
+        <form action="/" method="post" class="flex-center">
+          <div>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="First name"
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Last Name"
+            />
+          </div>
+          <div>
+            <input type="email" id="email" name="email" placeholder="Email" />
+          </div>
+          <div>
+            <input type="password" id="pwd" name="pwd" placeholder="Password" />
+          </div>
+          <button type="submit" class="bttn-signup">Submit</button>
+        </form>
+        <p>Already a member? <a href="./login.html">Log In</a></p>
+      </div>
+    </div>
+  </body>
+</html>
