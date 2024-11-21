@@ -10,7 +10,9 @@
 
 ## Features
 **📖 Multi-Page Layout**
+
 **🎨 Styled just with CSS**
+
 **📱 Fully Responsive**
 
 <h2>Mockup Phone</h2>
