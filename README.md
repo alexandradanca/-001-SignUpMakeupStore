@@ -1,5 +1,5 @@
 <h2 align="center">
-  <a href="https://alexandradanca.github.io/-001-SignUpMakeupStore/" target="_blank">SignUpMakeupStore</a>
+ :lipstick: <a href="https://alexandradanca.github.io/-001-SignUpMakeupStore/" target="_blank">SignUpMakeupStore</a>
 </h2>
 
 <p>This is a Sign Up page for MakeUp store. </br>It was created during front-end learning journey</p>
