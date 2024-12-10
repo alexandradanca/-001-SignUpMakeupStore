@@ -2,7 +2,7 @@
  :lipstick: <a href="https://alexandradanca.github.io/-001-SignUpMakeupStore/" target="_blank">SignUpMakeupStore</a>
 </h2>
 
-<p>This is a Sign Up page for MakeUp store. </br>It was created during front-end learning journey</p>
+<p>A stylish and user-friendly gateway for a seamless shopping experience at your favorite makeup store </br>It was created during front-end learning journey</p>
 
 ## Built With
 - HTML
